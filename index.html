@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIVARAJU V S P S S ABHIGNA</title>
+  <!-- Google Fonts for typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      /* Dark background with neon blue gradient overlay and electric circuits texture */
+      background-color: #02040f;
+      background-image: url("https://www.transparenttextures.com/patterns/circuits.png"), 
+                        linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+      background-blend-mode: overlay;
+      background-size: cover;
+      font-family: 'Open Sans', sans-serif;
+      color: #dcdcdc;
+      line-height: 1.6;
+    }
+    /* Header with Typewriter Animation & Neon Effects */
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      overflow: hidden;
+    }
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3em;
+      margin: 0;
+      color: #00ffff; /* Neon cyan */
+      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: .15em solid #00ffff;
+      width: 0;
+      animation: typing 3.5s steps(40, end) forwards,
+                 blink-caret 0.75s step-end infinite;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 3.6s;
+    }
+    /* Keyframes for Typewriter & Fade Animations */
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: #00ffff; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    /* Sticky Navbar */
+    nav {
+      background: rgba(0, 0, 0, 0.8);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      display: block;
+      padding: 15px 10px;
+      text-decoration: none;
+      color: #dcdcdc;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #00ffff;
+    }
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+    }
+    /* Section Styling */
+    section {
+      margin-bottom: 60px;
+    }
+    section h2 {
+      font-family: 'Poppins', sans-serif;a
+      text-shadow: 0 0 5px #00ffff;
+    }
+    /* Grid Layout for Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    /* Card Styling with Neon Effects */
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 5px;
+      border: 1px solid rgba(0,255,255,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 10px rgba(0,255,255,0.1);
+    }
+    .card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 4px 20px rgba(0,255,255,0.3);
+    }
+    .card h3 {
+      margin-top: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #00ffff;
+      text-shadow: 0 0 5px #00ffff;
+    }
+    /* Lists */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    /* Contact Section */
+    #contact p {
+      font-size: 1.1em;
+    }
+    .social a {
+      margin: 0 10px;
+      color: #dcdcdc;
+      font-size: 1.5em;
+      transition: color 0.3s;
+    }
+    .social a:hover {
+      color: #00ffff;
+    }
+    /* Footer Styling */
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: #dcdcdc;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    /* Fade & Slide Animation on Scroll */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SIVARAJU V S P S S ABHIGNA</h1>
+    <p>Fresh Graduate – Applying knowledge and skills in a professional, growth-oriented environment.</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#internships">Internships</a></li>
+      <li><a href="#education">Education &amp; Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <div class="container">
+    <section id="about" class="animate-on-scroll">
+      <h2>Professional Objective</h2>
+      <ul>
+        <li><strong>Professional Growth:</strong> Seeking a firm with a professional, work-driven environment to utilise and apply my knowledge and skills.</li>
+        <li><strong>Fresh Graduate:</strong> Aiming to grow professionally while contributing effectively to organisational goals.</li>
+        <li><strong>Skill Application:</strong> Eager to apply my expertise to real-world challenges and contribute to team success.</li>
+      </ul>
+      <p>
+        Connect with me on <a href="https://www.linkedin.com/in/abhigna-sivaraju-a853a4257/" target="_blank" style="color: #00ffff;">LinkedIn</a> or view my projects on <a href="https://github.com/abhignasivaraju/abhignasivaraju" target="_blank" style="color: #00ffff;">GitHub</a>.
+      </p>
+    </section>
+    
+    <section id="internships" class="animate-on-scroll">
+      <h2>Internship Experiences</h2>
+      <div class="grid">
+        <div class="card animate-on-scroll">
+          <h3>Google Internship Experience</h3>
+          <ul>
+            <li><strong>Digital Transformation:</strong> Completed training on Digital Transformation using Google Cloud.</li>
+            <li><strong>Infrastructure Modernisation:</strong> Worked on Infrastructure and Application Modernisation with Google Cloud.</li>
+            <li><strong>Data Innovation:</strong> Innovated with data leveraging Google Cloud tools and services.</li>
+            <li><strong>Security &amp; Operations:</strong> Gained insight into Google Cloud Security and Operations.</li>
+          </ul>
+        </div>
+        <div class="card animate-on-scroll">
+          <h3>Java Development Internships</h3>
+          <ul>
+            <li><strong>Codsoft (Jul - Aug 2023):</strong> Developed Java applications including a Number Game, Word Counter, ATM Interface, and Address Book System.</li>
+            <li><strong>Oasis Infobyte (Jan - Feb 2024):</strong> Designed projects such as a Number Guessing Game and an ATM Interface, sharpening coding proficiency.</li>
+          </ul>
+        </div>
+        <div class="card animate-on-scroll">
+          <h3>Web Development &amp; Virtual Experience</h3>
+          <ul>
+            <li><strong>Octanet Services (May - Jul 2024):</strong> Created web development projects like a landing page and a To-Do List application using HTML, CSS, and JavaScript.</li>
+            <li><strong>Deloitte (Dec 2024 - Jan 2025):</strong> Participated in a virtual simulation focusing on consulting and technology solutions, enhancing client interaction skills.</li>
+          </ul>
+        </div>
+        <div class="card animate-on-scroll">
+          <h3>Engineering &amp; Research Internships</h3>
+          <ul>
+            <li><strong>APTRANSCO (Jan - Mar 2025):</strong> Assisted in electrical power transmission operations and maintenance, gaining practical experience in power system management.</li>
+            <li><strong>Skill Dzire (Dec 2024 - Apr 2025):</strong> Conducted research projects on Solar PV Cells technology to deepen my understanding of solar energy systems.</li>
+            <li><strong>BIST Technologies (Dec 2024 - Apr 2025):</strong> Contributed to embedded systems projects involving hardware and software integration.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <section id="education" class="animate-on-scroll">
+      <h2>Education &amp; Core Skills</h2>
+      <div class="grid">
+        <div class="card animate-on-scroll">
+          <h3>Education</h3>
+          <ul>
+            <li><strong>JNTU-GV-CEV:</strong> B.Tech in Electrical and Electronics Engineering (2025)</li>
+            <li><strong>Narayana Junior College:</strong> MPC, 94% (2021)</li>
+            <li><strong>Sri Chaitanya High School:</strong> General, 96.8% (2019)</li>
+          </ul>
+        </div>
+        <div class="card animate-on-scroll">
+          <h3>Core Skills &amp; Abilities</h3>
+          <ul>
+            <li>Management</li>
+            <li>Problem Solving</li>
+            <li>Communication</li>
+            <li>Leadership</li>
+            <li>Web Design</li>
+            <li>Adaptability</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <section id="projects" class="animate-on-scroll">
+      <h2>Workshops &amp; Projects</h2>
+      <div class="grid">
+        <div class="card animate-on-scroll">
+          <h3>Arduino Robotics Workshop</h3>
+          <p>Attended a robotics workshop hosted by Technex at IIT Varanasi.</p>
+        </div>
+        <div class="card animate-on-scroll">
+          <h3>PCB Designing</h3>
+          <p>Gained practical experience in Printed Circuit Board design.</p>
+        </div>
+        <div class="card animate-on-scroll">
+          <h3>Anti Sleep Alarm</h3>
+          <p>Developed an innovative project and secured 3rd prize for the concept.</p>
+        </div>
+        <div class="card animate-on-scroll">
+          <h3>Solar Water Heating System</h3>
+          <p>Conducted a Techno-Economic Feasibility study for a hostel at JNTU-GV.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="contact" class="animate-on-scroll">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:your.email@example.com" style="color: #00ffff;">abhignasivaraju@gmail.com</a></p>
+      <p>Phone: [6305363483]</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/abhigna-sivaraju-a853a4257/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/abhignasivaraju/abhignasivaraju" target="_blank"><i class="fab fa-github-square"></i></a>
+      </div>
+    </section>
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 SIVARAJU V S P S S ABHIGNA. All rights reserved.</p>
+  </footer>
+  
+  <!-- JavaScript: Trigger animations on scroll using Intersection Observer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const animatedElements = document.querySelectorAll('.animate-on-scroll');
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      animatedElements.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
